@@ -2,7 +2,7 @@
 #
 
 # 青龙一键安装脚本
-# GitHub仓库： https://github.com/FlechazoPh/QLDependency
+# GitHub仓库： https://github.com/FlechazoPh/ql/dataDependency
 
 # 安装报错，请提交Issue
 
@@ -45,7 +45,7 @@ echo
 npm -v
 
 npm config set registry https://registry.npm.taobao.org
-cd /ql
+cd /ql/data
 pnpm add -g pnpm
 
 pnpm install -g
@@ -56,16 +56,16 @@ pnpm install -g js-base64 qrcode-terminal silly-datetime
 
 pip3 install requests
 
-cd /ql/scripts/ && apk add --no-cache build-base g++ cairo-dev pango-dev giflib-dev && npm i && npm i -S ts-node typescript @types/node date-fns axios png-js canvas --build-from-source
-cd /ql
+cd /ql/data/scripts/ && apk add --no-cache build-base g++ cairo-dev pango-dev giflib-dev && npm i && npm i -S ts-node typescript @types/node date-fns axios png-js canvas --build-from-source
+cd /ql/data
 apk add --no-cache build-base g++ cairo-dev pango-dev giflib-dev && cd scripts && npm install canvas --build-from-source
-cd /ql
+cd /ql/data
 apk add python3 zlib-dev gcc jpeg-dev python3-dev musl-dev freetype-dev
 
 echo
 TIME g "依赖安装完毕...建议重启 Docker "
 
 echo
-TIME g "有任何问题，请在此仓库提交Issue： https://github.com/FlechazoPh/QLDependency"
+TIME g "有任何问题，请在此仓库提交Issue： https://github.com/FlechazoPh/ql/dataDependency"
 echo
 exit 0
